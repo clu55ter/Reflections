@@ -1,4 +1,73 @@
-1. What happens when you initialize a repository? Why do you need to do it?
-initialising a repository creates a staging are to see changes between changes you have made.
 
-2. How can you use the staging area to make sure you have one commit per logical change?
+Concept Map: init, add, staging area
+
+We’ve introduced a few new concepts since we last revisited our concept map.
+
+git init (create a git for folder)
+git add 'xxxx'(add file to staging area)
+git log (show list of git commits)
+git status (show changes since last commit)
+git commit (commits staging area to repositories)
+staging area
+working directory
+
+some commands TT
+git diff (difference between working and staging area)
+git diff --staged ( difference between staging and repository areas)
+gitt reset --hard (reset the last changes made to the working and staging area!!!)
+gitt branch (display the current branches) current brunch will be highlighted in green and a * next to it.
+git brance 'xxxx' (creating a new branch)
+git checkout 'xxxx' (switching between branches)
+
+Q1. How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+Q.2 What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+git log --graph --oneline mater easy_mode ((--oneline lists commits in a short one line output.) This line compares commits between two branches)
+git checkout -b new_branch_name
+
+Q.3. How do the diagrams help you visualize the branch structure?
+
+git merge master coines (merging two branches
+
+git gc (run garbage collector)
+
+git reset --hard HEAD~1
+The HEAD~1 means the commit before head.
+
+Or, you could look at the output of git log, find the commit id of the commit you want to back up to, and then do this:
+git reset --hard <sha1-commit-id>
+
+git show (will show change between commit and its parent (original) one.
+
+Q.4. What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+git log --graph
+*
+* commit 8c2fa17b119b62d9c93ec3389f560065620b59d2
+| Author: tanertemel <tanertemel@live.co.uk>
+| Date: Thu Dec 11 13:45:32 2014 +0000
+|
+| Make Coins Yellow
+|
+* commit e6ceb35fa0ea7d4290b8c6f1ff3d3bb4b505cfce
+|\ Merge: 898b059 354dfdd
+| | Author: tanertemel <tanertemel@live.co.uk>
+| | Date: Thu Dec 11 13:04:35 2014 +0000
+| |
+| | Fixed bug git merge conflict
+| |
+| | Conflicts:
+| | game.js
+| |
+| * commit 354dfdd530b1631a2834b2e9e242d31e625c9c13
+| | Author: Sarah Spikes <sarah@udacity.com>
+| | Date: Tue Jun 1 13:06:52 2010 -0700
+| |
+| | Make ships able to spawn on coins
+| |
+| * commit 0c6daf150d6dedb73e60966d853c699a42b3169d
+
+git log -n 1 ( gets the last commit log)
+
+Q.5. What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
