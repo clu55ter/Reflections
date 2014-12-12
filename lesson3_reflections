@@ -19,14 +19,14 @@ I would branch for bugfix or adding/removing a function.
 What is the benefit of having a copy of the last known state of the remote
 stored locally?
 
-    Fill in your answer here
+    To work off line i.e. if you are on a flight with no internet access.
 
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+    Github makes it easier collaboration by creating a work flow environment. 
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    The changes made by collaborators can be fixed before making changes to master
